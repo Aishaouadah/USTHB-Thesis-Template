@@ -1,0 +1,128 @@
+\documentclass[xcolor=table, 12pt, a4paper, french]{report}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+
+\usepackage[french]{babel}
+\usepackage[autolanguage]{numprint} % for the \nombre command
+
+
+% Set page size and margins
+% Replace `letterpaper' with `a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=2cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+
+\title{Your Title}
+\author{Your Name}
+
+\begin{document}
+
+
+
+%%d'ici aussi
+\begin{titlepage}
+    
+    
+    
+    	
+    	\begin{minipage}{1\linewidth}
+			\centering
+			\begin{tabular}{ccc}
+				\begin{tabular}{c}
+					\\
+					\includegraphics[scale=0.07]{figures/usthb.png}
+				\end{tabular}
+				&
+				\begin{tabular}{c}
+					\\
+					\text{ République Algérienne Démocratique et Populaire}\\
+                    \text{ Ministère de l’Enseignement Supérieur et de la Recherche \\ Scientifique}\\
+				\end{tabular}
+				&
+				\begin{tabular}{c}
+					\\
+					\includegraphics[scale=0.07]{figures/usthb.png}
+				\end{tabular}
+			\end{tabular}
+		\end{minipage}
+    
+    
+       
+    \begin{center}
+        
+        \textbf{Université des Sciences et de la Technologie Houari Boumediene}\\
+        \text{Faculté d’Électronique et d’Informatique}\\
+        \text{Département d’Informatique}\\
+        \textbf{Mémoire de Master}\\
+        \text{Spécialité :}\\
+        \text{Systèmes Informatiques Intelligents}\\
+        
+        
+    \end{center}
+    \vspace*{0.5 cm}
+    \begin{center}
+    
+    \end{center}
+    
+    \rule{\linewidth}{0.2 mm}
+	{ \LARGE  
+	   \begin{center}
+	       \textbf{Thème: }\\
+	       \textbf{TITLE}\\
+	       
+	   \end{center} 
+	   
+	\rule{\linewidth}{0.2 mm} \\[1.5 cm]
+	}
+	
+	\begin{minipage}{0.5\textwidth}
+		\begin{flushleft} \large
+		    \textbf{Encadré par:}\\
+		    \text{NOM Prenom}\\
+		    \text{NOM Prenom}\\
+		    \textbf{Membre du Jurys:}\\
+		    \text{NOM Prenom}\\
+		    \text{NOM Prenom}\\
+		    
+			\end{flushleft}
+			\end{minipage}~
+		\begin{minipage}{0.4\textwidth}
+            
+		\begin{flushright} \large
+			\textbf{Présenté par:} \\
+            \text{NOM Prenom} \\
+            	\textbf{Soutenu le:} \\
+            \text{XX/XX/XXXX} \\
+		\end{flushright}
+	\end{minipage}\\[2 cm]
+	\begin{center}
+	    Projet SII-E-XX
+	\end{center}
+\end{titlepage}
+
+
+
+
+\tableofcontents
+\listoftables
+\listoffigures
+\pagebreak
+\include{Chapters/dedicaces}
+\include{Chapters/remerciements}
+\include{Chapters/résumé}
+\include{Chapters/abstract}
+\include{Chapters/tabledesmatiers}
+\include{Chapters/introduction}
+\include{Chapters/etatdel'art}
+\include{Chapters/realisation}
+\include{Chapters/conclusions}
+
+
+
+
+
+\end{document}
