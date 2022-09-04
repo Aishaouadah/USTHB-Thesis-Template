@@ -1,34 +1,75 @@
-\documentclass[xcolor=table, 12pt, a4paper, french]{report}
-
-% Language setting
-% Replace `english' with e.g. `spanish' to change the document language
-
+\documentclass[12pt]{report}
+\usepackage[format=plain,
+            font=it]{caption}
+%====================== PACKAGES ======================
+%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
+\usepackage[Glenn]{fncychap} 
+\usepackage{fancyhdr}
+\usepackage[final]{pdfpages}
+\usepackage{array}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 \usepackage[french]{babel}
-\usepackage[autolanguage]{numprint} % for the \nombre command
-
-
-% Set page size and margins
-% Replace `letterpaper' with `a4paper' for UK/EU standard size
-\usepackage[a4paper,top=2cm,bottom=2cm,left=2cm,right=2cm,marginparwidth=2cm]{geometry}
-
-% Useful packages
-\usepackage{amsmath}
+\usepackage[utf8]{inputenc}
+%pour gérer les positionnement d'images
+\usepackage{float}
+\usepackage[sorting=none]{biblatex}
 \usepackage{graphicx}
-\usepackage[colorlinks=true, allcolors=blue]{hyperref}
-
-\title{Your Title}
-\author{Your Name}
-
-\begin{document}
-
-
-
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{url}
+\frenchbsetup{StandardLists=true} % à inclure si on utilise \usepackage[french]{babel}
+\usepackage{enumitem}
+%pour la mise en page des tableaux
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{dcolumn,ragged2e}
+\usepackage{siunitx}
+\usepackage{longtable}
+\usepackage{booktabs}   
+\usepackage{ltablex}
+\newcolumntype{L}{>{\raggedright\arraybackslash}X}
+%pour utiliser \floatbarrier
+\usepackage{colortbl}
+%espacement entre les lignes
+\usepackage{setspace}
+%modifier la mise en page de l'abstract
+\usepackage{abstract}
+%police et mise en page (marges) du document
+\usepackage[T1]{fontenc}
+\usepackage[top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{amsmath,amsfonts,amssymb}
+%Pour les galerie d'images
+\usepackage{array}
+\usepackage{makecell}
+\usepackage{multirow}
+%\usepackage{subfig}
+%\usepackage{graphicx}
+%\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{amsthm}
+\newtheorem{definition}{Définition}
+\usepackage{rotating}
+%\usepackage{multirow}
+\usepackage{graphicx}
+\usepackage{xspace}
+\usepackage{wrapfig}
+\usepackage[hypertexnames=false]{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    filecolor=black,      
+    urlcolor=black,
+    anchorcolor=black,
+    citecolor=blue,
+}
+\usepackage{subcaption}
+\usepackage{tablefootnote}
+\usepackage[acronym]{glossaries}
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\bibliography{citation}
+\begin{document} 
 %%d'ici aussi
-\begin{titlepage}
-    
-    
-    
-    	
+\begin{titlepage}   
     	\begin{minipage}{1\linewidth}
 			\centering
 			\begin{tabular}{ccc}
@@ -40,7 +81,8 @@
 				\begin{tabular}{c}
 					\\
 					\text{ République Algérienne Démocratique et Populaire}\\
-                    \text{ Ministère de l’Enseignement Supérieur et de la Recherche \\ Scientifique}\\
+                    \text{ Ministère de l’Enseignement Supérieur et de la Recherche} \\
+                    \text{ Scientifique}\\
 				\end{tabular}
 				&
 				\begin{tabular}{c}
@@ -96,33 +138,31 @@
 			\textbf{Présenté par:} \\
             \text{NOM Prenom} \\
             	\textbf{Soutenu le:} \\
-            \text{XX/XX/XXXX} \\
+            \text{18/09/2022} \\
 		\end{flushright}
 	\end{minipage}\\[2 cm]
 	\begin{center}
-	    Projet SII-E-XX
+	    Projet:  SII\_E\_0XX / 2022
 	\end{center}
 \end{titlepage}
+%changing names%
+\renewcommand{\listfigurename}{Listes des figures}
+\renewcommand{\listtablename}{Listes des tableaux}
 
 
-
-
-\tableofcontents
-\listoftables
-\listoffigures
-\pagebreak
-\include{Chapters/dedicaces}
 \include{Chapters/remerciements}
-\include{Chapters/résumé}
+\include{Chapters/resume}
 \include{Chapters/abstract}
-\include{Chapters/tabledesmatiers}
+\hypersetup{hidelinks}
+\tableofcontents
+\include{Chapters/acronymes}
+\listoffigures
+\listoftables
 \include{Chapters/introduction}
-\include{Chapters/etatdel'art}
-\include{Chapters/realisation}
+\include{Chapters/chapitre1}
+\include{Chapters/chapitre2}
+\include{Chapters/chapitre3}
 \include{Chapters/conclusions}
-
-
-
-
-
+\include{Chapters/annexe}
+\printbibliography
 \end{document}
